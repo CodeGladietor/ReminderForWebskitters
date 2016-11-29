@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="180dp"
+    android:orientation="vertical"
+    android:background="@drawable/roundedrectangleshape"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#32060606"
+        android:id="@+id/birthdaypannel">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textColor="#ffffff"
+            android:textSize="27dp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="15dp">
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/search_icon_blk"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="15dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Name / Date"
+        android:textSize="15dp"
+
+        android:paddingLeft="20dp"
+        android:id="@+id/editText"
+        android:background="#0affffff" />
+</LinearLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#cb92bef2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:src="@drawable/lineshape"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:id="@+id/birthday_done_button"
+                android:background="#00ffffff"
+                android:text="SEARCH"
+                android:textColor="#5975da"
+                android:textSize="20dp"
+                android:gravity="center"
+                />
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:src="#9602021a"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:id="@+id/birthday_cancle_button"
+                android:background="#00587ad6"
+                android:text="CANCLE"
+                android:textColor="#5975da"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
