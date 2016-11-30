@@ -3,16 +3,26 @@
     android:orientation="vertical" android:layout_width="200dp"
     android:layout_height="300dp"
     android:background="@drawable/roundedrectangleshape">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Choose Event"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#4285ca"
+        android:background="#16060606"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal"
         android:background="#16060606"
         android:gravity="center">
         <ImageView
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:background="@drawable/anniversaryicon"
+            android:background="@drawable/gifticon"
             android:layout_marginLeft="12dp"/>
     <Button
         android:layout_width="match_parent"
@@ -47,6 +57,28 @@
             />
     </LinearLayout>
     <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    android:background="#16060606"
+    android:gravity="center"
+    android:layout_marginTop="2dp">
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/anniversaryicon"
+        android:layout_marginLeft="12dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#00fffefe"
+        android:text="Meeting"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:textColor="#5aa1ea"
+        />
+</LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"
@@ -56,17 +88,41 @@
         <ImageView
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:background="@drawable/anniversaryicon"
+            android:background="@drawable/remindericon"
             android:layout_marginLeft="12dp"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="#00fffefe"
-            android:text="Meeting"
+            android:text="Reminder"
             android:textSize="15dp"
             android:gravity="center"
             android:textColor="#5aa1ea"
             />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="#16060606"
+        android:gravity="center"
+        android:layout_marginTop="2dp">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/todoicon"
+            android:layout_marginLeft="12dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#00fffefe"
+            android:text="ToDo"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:textColor="#5aa1ea"
+            />
+    </LinearLayout>
+
+
 
 </LinearLayout>

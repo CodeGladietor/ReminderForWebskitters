@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Others"
+            android:text="To Do"
             android:textColor="#ffffff"
             android:textSize="30dp"
             android:textStyle="bold"
