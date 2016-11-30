@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle mActionBarDrawerToggle;
     private Button navbutton;
     private Button serchButton;
+    private Button addButton;
     ListView list;
     String a,b;
 
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mDrawerLayout= (DrawerLayout) findViewById(R.id.drawerlayout);
         serchButton= (Button) findViewById(R.id.serch);
+        addButton= (Button) findViewById(R.id.addbutton);
 
 
         //nav code starts from here
@@ -82,7 +84,18 @@ public class MainActivity extends AppCompatActivity {
                 final Dialog dialog=new Dialog(MainActivity.this,R.style.AlertDialogCustom);
                 dialog.setContentView(R.layout.searchaleartdialoge);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                /*dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);*/
+                dialog.show();
+            }
+        });
+
+        //for add button
+
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog=new Dialog(MainActivity.this,R.style.AlertDialogCustom);
+                dialog.setContentView(R.layout.spinnercoustome);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dialog.show();
             }
         });
