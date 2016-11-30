@@ -1,11 +1,15 @@
 package com.example.avikrayan.reminderforwebskitters;
 
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -16,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
     private Button navbutton;
+    private Button serchButton;
     ListView list;
     String a,b;
 
@@ -26,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mDrawerLayout= (DrawerLayout) findViewById(R.id.drawerlayout);
+        serchButton= (Button) findViewById(R.id.serch);
+
+
+        //nav code starts from here
+
         list= (ListView) findViewById(R.id.mylist);
         list.setAdapter(new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,array));
 
@@ -62,7 +72,29 @@ public class MainActivity extends AppCompatActivity {
         });
         mDrawerLayout.setDrawerListener(new RightMenuListener());
 
+        //nav impliments stops here
+
+        //for serch  button
+
+        serchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog=new Dialog(MainActivity.this,R.style.AlertDialogCustom);
+                dialog.setContentView(R.layout.searchaleartdialoge);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                /*dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);*/
+                dialog.show();
+            }
+        });
+
+
+
+
     }
+
+
+    //nav accesorries starts here
+
     public class RightMenuListener implements DrawerLayout.DrawerListener {
 
         @Override
@@ -101,4 +133,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+    //nav accesorries stops here
+
+
 }

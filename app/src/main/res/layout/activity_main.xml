@@ -42,6 +42,7 @@
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/addbutton"
             android:layout_marginRight="15dp"
+            android:id="@+id/serch"
             />
     </RelativeLayout>
     <LinearLayout
