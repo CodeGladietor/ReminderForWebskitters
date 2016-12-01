@@ -13,22 +13,29 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
-
+//// TODO: 30-11-2016 correct the spinner tapping 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
     private Button navbutton;
     private Button serchButton;
     private Button addButton;
+    private LinearLayout anniverserieLayout;
+    private LinearLayout birthdayLayout;
+    private LinearLayout meetingLayout;
+    private LinearLayout reminderLayout;
+    private LinearLayout todoLayout;
     ListView list;
+    Dialog spinnerDialog;
     String a,b;
 
     private String[] array={"cow","dog","cat","mouse"};
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mDrawerLayout= (DrawerLayout) findViewById(R.id.drawerlayout);
@@ -93,13 +100,73 @@ public class MainActivity extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog=new Dialog(MainActivity.this,R.style.AlertDialogCustom);
-                dialog.setContentView(R.layout.spinnercoustome);
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                dialog.show();
+                spinnerDialog=new Dialog(MainActivity.this,R.style.AlertDialogCustom);
+                spinnerDialog.setContentView(R.layout.spinnercoustome);
+                spinnerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                spinnerDialog.show();
+
+
+                //for anniversery
+
+                anniverserieLayout= (LinearLayout) spinnerDialog.findViewById(R.id.anniversery);
+
+                anniverserieLayout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        spinnerDialog.dismiss();
+                        shoAlertDialog(R.layout.aleartdialogeanniversary);
+                    }
+                });
+
+                //for birthdate
+
+                birthdayLayout= (LinearLayout) spinnerDialog.findViewById(R.id.birthdate);
+                birthdayLayout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v1) {
+                        spinnerDialog.dismiss();
+                        shoAlertDialog(R.layout.aleartdialogebirthday);
+                    }
+                });
+
+                //for meeeting
+
+                meetingLayout= (LinearLayout) spinnerDialog.findViewById(R.id.meeting);
+                meetingLayout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        spinnerDialog.dismiss();
+                        shoAlertDialog(R.layout.aleartdialogemeeting);
+                    }
+                });
+
+                //for reminder
+
+                reminderLayout= (LinearLayout) spinnerDialog.findViewById(R.id.reminder);
+                reminderLayout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        spinnerDialog.dismiss();
+                        shoAlertDialog(R.layout.aleartdialogereminder);
+                    }
+                });
+
+                //for to-do
+
+                todoLayout= (LinearLayout) spinnerDialog.findViewById(R.id.todo);
+                todoLayout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        spinnerDialog.dismiss();
+                        shoAlertDialog(R.layout.aleartdialogetodo);
+                    }
+                });
+
+
             }
         });
 
+        //for spinner button tap
 
 
 
@@ -148,6 +215,44 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //nav accesorries stops here
+
+/*    public void showDialog(View view){
+        if (spinnerDialog.isShowing()){
+            spinnerDialog.dismiss();
+        }
+        switch (view.getId()){
+            case R.id.anniversery:
+                 // TODO: 30-11-2016 show anniversery dialog
+                shoAlertDialog(R.layout.aleartdialogeanniversary);
+                break;
+            case R.id.birthdate:
+                // TODO: 30-11-2016 show birthdate dialog
+                shoAlertDialog(R.layout.aleartdialogebirthday);
+                break;
+            case R.id.meeting:
+                // TODO: 30-11-2016 show meeting dialog
+                shoAlertDialog(R.layout.aleartdialogemeeting);
+                break;
+            case R.id.reminder:
+                // TODO: 30-11-2016 reminder dialog
+                shoAlertDialog(R.layout.aleartdialogereminder);
+                break;
+            case R.id.todo:
+                // TODO: 30-11-2016 todo dialog
+                shoAlertDialog(R.layout.aleartdialogetodo);
+                break;
+
+        }
+
+    }*/
+    public void shoAlertDialog(int layout){
+
+       Dialog dialog=new Dialog(MainActivity.this,R.style.AlertDialogCustom);
+        dialog.setContentView(layout);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
+
+    }
 
 
 }
