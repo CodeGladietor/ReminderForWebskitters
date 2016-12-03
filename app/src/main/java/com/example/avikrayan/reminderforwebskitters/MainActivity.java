@@ -15,9 +15,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+//// TODO: 30-11-2016 correct the spinner tapping 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
     private Button navbutton;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     ListView list;
     Dialog spinnerDialog;
     String a,b;
+
+    AlertDialogHandler handler;
 
     private String[] array={"cow","dog","cat","mouse"};
 
@@ -106,6 +109,8 @@ public class MainActivity extends AppCompatActivity {
                 spinnerDialog.show();
 
 
+
+
                 //for anniversery
 
                 anniverserieLayout= (LinearLayout) spinnerDialog.findViewById(R.id.anniversery);
@@ -113,8 +118,10 @@ public class MainActivity extends AppCompatActivity {
                 anniverserieLayout.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+
+                        handler=new AlertDialogHandler(R.layout.aleartdialogeanniversary,MainActivity.this,R.id.anniversery_done_button,R.id.anniversery_cancle_button,R.id.anniversery_tittle_edtx);
+                        handler.showDialog();
                         spinnerDialog.dismiss();
-                        shoAlertDialog(R.layout.aleartdialogeanniversary);
                     }
                 });
 
@@ -125,7 +132,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v1) {
                         spinnerDialog.dismiss();
-                        shoAlertDialog(R.layout.aleartdialogebirthday);
+                        handler=new AlertDialogHandler(R.layout.aleartdialogebirthday,MainActivity.this,R.id.birthday_done_button,R.id.birthday_cancle_button,R.id.birthday_tittle_edtx);
+                        handler.showDialog();
                     }
                 });
 
@@ -136,7 +144,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         spinnerDialog.dismiss();
-                        shoAlertDialog(R.layout.aleartdialogemeeting);
+                        handler=new AlertDialogHandler(R.layout.aleartdialogemeeting,MainActivity.this,R.id.meeting_done_button,R.id.meeting_cancle_button,R.id.meeting_tittle_edtx);
+                        handler.showDialog();
                     }
                 });
 
@@ -147,7 +156,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         spinnerDialog.dismiss();
-                        shoAlertDialog(R.layout.aleartdialogereminder);
+                        handler=new AlertDialogHandler(R.layout.aleartdialogereminder,MainActivity.this,R.id.reminder_done_button,R.id.reminder_cancle_button,R.id.reminder_tittle_edtx);
+                        handler.showDialog();
                     }
                 });
 
@@ -158,7 +168,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         spinnerDialog.dismiss();
-                        shoAlertDialog(R.layout.aleartdialogetodo);
+                        handler=new AlertDialogHandler(R.layout.aleartdialogetodo,MainActivity.this,R.id.todo_done_button,R.id.todo_cancle_button,R.id.todo_tittle_edtx);
+                        handler.showDialog();
                     }
                 });
 
@@ -167,6 +178,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //for spinner button tap
+
 
 
     }
@@ -215,7 +227,35 @@ public class MainActivity extends AppCompatActivity {
 
     //nav accesorries stops here
 
+/*    public void showDialog(View view){
+        if (spinnerDialog.isShowing()){
+            spinnerDialog.dismiss();
+        }
+        switch (view.getId()){
+            case R.id.anniversery:
+                 // TODO: 30-11-2016 show anniversery dialog
+                shoAlertDialog(R.layout.aleartdialogeanniversary);
+                break;
+            case R.id.birthdate:
+                // TODO: 30-11-2016 show birthdate dialog
+                shoAlertDialog(R.layout.aleartdialogebirthday);
+                break;
+            case R.id.meeting:
+                // TODO: 30-11-2016 show meeting dialog
+                shoAlertDialog(R.layout.aleartdialogemeeting);
+                break;
+            case R.id.reminder:
+                // TODO: 30-11-2016 reminder dialog
+                shoAlertDialog(R.layout.aleartdialogereminder);
+                break;
+            case R.id.todo:
+                // TODO: 30-11-2016 todo dialog
+                shoAlertDialog(R.layout.aleartdialogetodo);
+                break;
 
+        }
+
+    }*/
     public void shoAlertDialog(int layout){
 
        Dialog dialog=new Dialog(MainActivity.this,R.style.AlertDialogCustom);
