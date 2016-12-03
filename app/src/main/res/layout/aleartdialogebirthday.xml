@@ -47,6 +47,8 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:orientation="horizontal"
+            android:id="@+id/dateButton"
+            android:clickable="true"
             android:background="#0b282727"
             android:gravity="center">
             <ImageView
@@ -54,6 +56,7 @@
                 android:layout_height="35dp"
                 android:src="@drawable/calicon"
                 android:layout_gravity="center_vertical"
+                android:clickable="false"
 
                />
         <TextView
@@ -62,6 +65,7 @@
             android:text="Date"
             android:textSize="20dp"
             android:textColor="#bb060000"
+            android:clickable="false"
            android:layout_marginLeft="6dp"
             android:gravity="center_vertical"
             />
@@ -72,11 +76,13 @@
         android:orientation="horizontal"
         android:background="#0b282727"
         android:gravity="center"
+            android:clickable="true"
         android:layout_marginTop="6dp">
         <ImageView
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:src="@drawable/clockicon"
+            android:clickable="false"
             android:layout_gravity="center_vertical"
 
             />
@@ -87,6 +93,7 @@
             android:textSize="20dp"
             android:textColor="#bb060000"
             android:layout_marginLeft="6dp"
+            android:clickable="false"
             android:gravity="center_vertical"
             />
     </LinearLayout>
@@ -102,6 +109,8 @@
                 android:layout_height="35dp"
                 android:src="@drawable/favicon"
                 android:layout_gravity="center_vertical"
+                android:id="@+id/wishbutton"
+                android:clickable="true"
 
                 />
             <TextView
