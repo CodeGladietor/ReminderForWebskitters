@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout todoLayout;
     ListView list;
     Dialog spinnerDialog;
-    String a,b;
+    String a;
+    String b;
 
     AlertDialogHandler handler;
 
