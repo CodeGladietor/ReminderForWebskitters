@@ -17,7 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
-//// TODO: 30-11-2016 correct the spinner tapping 
+
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
     private Button navbutton;
@@ -169,7 +169,6 @@ public class MainActivity extends AppCompatActivity {
         //for spinner button tap
 
 
-
     }
 
 
@@ -216,35 +215,7 @@ public class MainActivity extends AppCompatActivity {
 
     //nav accesorries stops here
 
-/*    public void showDialog(View view){
-        if (spinnerDialog.isShowing()){
-            spinnerDialog.dismiss();
-        }
-        switch (view.getId()){
-            case R.id.anniversery:
-                 // TODO: 30-11-2016 show anniversery dialog
-                shoAlertDialog(R.layout.aleartdialogeanniversary);
-                break;
-            case R.id.birthdate:
-                // TODO: 30-11-2016 show birthdate dialog
-                shoAlertDialog(R.layout.aleartdialogebirthday);
-                break;
-            case R.id.meeting:
-                // TODO: 30-11-2016 show meeting dialog
-                shoAlertDialog(R.layout.aleartdialogemeeting);
-                break;
-            case R.id.reminder:
-                // TODO: 30-11-2016 reminder dialog
-                shoAlertDialog(R.layout.aleartdialogereminder);
-                break;
-            case R.id.todo:
-                // TODO: 30-11-2016 todo dialog
-                shoAlertDialog(R.layout.aleartdialogetodo);
-                break;
 
-        }
-
-    }*/
     public void shoAlertDialog(int layout){
 
        Dialog dialog=new Dialog(MainActivity.this,R.style.AlertDialogCustom);
