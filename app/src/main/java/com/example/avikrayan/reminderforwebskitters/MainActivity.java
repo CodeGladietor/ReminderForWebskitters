@@ -9,13 +9,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
+
+import com.example.avikrayan.reminderforwebskitters.Handler.AlertDialogHandler;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                        handler=new AlertDialogHandler(R.layout.aleartdialogeanniversary,MainActivity.this,R.id.anniversery_done_button,R.id.anniversery_cancle_button,R.id.anniversery_tittle_edtx);
+                        handler=new AlertDialogHandler(R.layout.aleartdialogeanniversary,MainActivity.this,R.id.anniversery_done_button,R.id.anniversery_cancle_button,R.id.anniversery_tittle_edtx,R.id.dateButton,R.id.timeButton,R.id.wishbutton);
                         handler.showDialog();
                         spinnerDialog.dismiss();
                     }
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v1) {
                         spinnerDialog.dismiss();
-                        handler=new AlertDialogHandler(R.layout.aleartdialogebirthday,MainActivity.this,R.id.birthday_done_button,R.id.birthday_cancle_button,R.id.birthday_tittle_edtx);
+                        handler=new AlertDialogHandler(R.layout.aleartdialogebirthday,MainActivity.this,R.id.birthday_done_button,R.id.birthday_cancle_button,R.id.birthday_tittle_edtx,R.id.dateButton,R.id.timeButton,R.id.wishbutton);
                         handler.showDialog();
                     }
                 });
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         spinnerDialog.dismiss();
-                        handler=new AlertDialogHandler(R.layout.aleartdialogemeeting,MainActivity.this,R.id.meeting_done_button,R.id.meeting_cancle_button,R.id.meeting_tittle_edtx);
+                        handler=new AlertDialogHandler(R.layout.aleartdialogemeeting,MainActivity.this,R.id.meeting_done_button,R.id.meeting_cancle_button,R.id.meeting_tittle_edtx,R.id.dateButton,R.id.timeButton,R.id.wishbutton);
                         handler.showDialog();
                     }
                 });
@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         spinnerDialog.dismiss();
-                        handler=new AlertDialogHandler(R.layout.aleartdialogereminder,MainActivity.this,R.id.reminder_done_button,R.id.reminder_cancle_button,R.id.reminder_tittle_edtx);
+                        handler=new AlertDialogHandler(R.layout.aleartdialogereminder,MainActivity.this,R.id.reminder_done_button,R.id.reminder_cancle_button,R.id.reminder_tittle_edtx,R.id.dateButton,R.id.timeButton,R.id.wishbutton);
                         handler.showDialog();
                     }
                 });
@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         spinnerDialog.dismiss();
-                        handler=new AlertDialogHandler(R.layout.aleartdialogetodo,MainActivity.this,R.id.todo_done_button,R.id.todo_cancle_button,R.id.todo_tittle_edtx);
+                        handler=new AlertDialogHandler(R.layout.aleartdialogetodo,MainActivity.this,R.id.todo_done_button,R.id.todo_cancle_button,R.id.todo_tittle_edtx,R.id.dateButton,R.id.timeButton,R.id.wishbutton);
                         handler.showDialog();
                     }
                 });

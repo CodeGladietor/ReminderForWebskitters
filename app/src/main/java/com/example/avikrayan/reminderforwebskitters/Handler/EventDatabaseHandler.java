@@ -5,5 +5,6 @@ package com.example.avikrayan.reminderforwebskitters.Handler;
  */
 
 public class EventDatabaseHandler {
+    // TODO: 03-12-2016 create the datahandler
 
 }
