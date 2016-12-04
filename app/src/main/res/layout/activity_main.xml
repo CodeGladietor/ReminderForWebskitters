@@ -109,14 +109,35 @@
         </RelativeLayout>
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/todaycontent"
+        android:layout_below="@+id/eventpannel"
+        android:clickable="true"
+        android:layout_marginTop="1dp">
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/eventpannel"
-        android:layout_marginTop="1dp"
-        android:id="@+id/list">
+        android:id="@+id/todaylist">
 
     </ListView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/favouritecontent"
+        android:layout_below="@+id/eventpannel"
+        android:layout_marginTop="1dp">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/favoritelist">
+
+        </ListView>
+    </LinearLayout>
 
     <android.support.v4.widget.DrawerLayout
         android:layout_width="match_parent"

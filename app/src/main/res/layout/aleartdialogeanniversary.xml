@@ -152,10 +152,7 @@
                     android:textSize="20dp"
                     android:gravity="center"
                     />
-                <ImageView
-                    android:layout_width="2dp"
-                    android:layout_height="fill_parent"
-                    android:src="#9602021a"/>
+
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="30dp"
@@ -169,6 +166,11 @@
                     android:layout_marginLeft="5dp"
 
                     />
+
+                <ImageView
+                    android:layout_width="2dp"
+                    android:layout_height="fill_parent"
+                    android:src="#9602021a"/>
             </LinearLayout>
         </LinearLayout>
 

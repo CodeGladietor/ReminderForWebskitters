@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/img_bg"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@drawable/img_topbg"
+        android:id="@+id/topPanel"
+        >
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/side_nav_icon"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="My Reviews"
+            android:textColor="#ffffff"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="14dp"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/img_topbg"
+        android:orientation="horizontal"
+        >
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/future"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FUTURE"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:layout_marginTop="11dp"
+
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:background="#47c5ff"
+                android:id="@+id/futurebar"
+
+                />
+
+        </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/past"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PAST"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="11dp"
+
+
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#47c5ff"
+                    android:visibility="gone"
+                    android:id="@+id/pastbar"
+                    />
+
+            </RelativeLayout>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/futurecontent"
+
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="No Reviews"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:layout_marginRight="16dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="12dp"
+            android:text="When you stayed at a hostel you'l be able to leave a Review 24 houre a checkout "
+            />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        android:id="@+id/pastcontent"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="No Reviews"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:layout_marginRight="16dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="12dp"
+            android:text="When you leave a review you will see here "
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

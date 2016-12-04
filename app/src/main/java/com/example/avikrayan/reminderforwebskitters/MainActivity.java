@@ -12,8 +12,10 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import com.example.avikrayan.reminderforwebskitters.Handler.AlertDialogHandler;
 
@@ -29,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout meetingLayout;
     private LinearLayout reminderLayout;
     private LinearLayout todoLayout;
+    private RelativeLayout today;
+    private RelativeLayout favourite;
+    private LinearLayout todaycontent;
+    private LinearLayout favouritecontent;
+    private ImageView todayBar,favouriteBar;
     ListView list;
     Dialog spinnerDialog;
     String a;
@@ -42,6 +49,35 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //tabswipe start here
+
+        todayBar= (ImageView) findViewById(R.id.todaybar);
+        favouriteBar= (ImageView) findViewById(R.id.favouritebar);
+        todaycontent= (LinearLayout) findViewById(R.id.todaycontent);
+        favouritecontent= (LinearLayout) findViewById(R.id.favouritecontent);
+        todaycontent.setOnTouchListener(new OnSwipeTouchListener(this){
+            @Override
+            public void onSwipeRight() {
+                favouritecontent.setVisibility(View.VISIBLE);
+                todayBar.setVisibility(View.GONE);
+                favouriteBar.setVisibility(View.VISIBLE);
+                todayBar.setVisibility(View.GONE);
+            }
+        });
+        favouritecontent.setOnTouchListener(new OnSwipeTouchListener(this){
+
+            @Override
+            public void onSwipeLeft() {
+                todaycontent.setVisibility(View.VISIBLE);
+                favouritecontent.setVisibility(View.GONE);
+                todayBar.setVisibility(View.VISIBLE);
+                favouriteBar.setVisibility(View.GONE);
+            }
+        });
+
+
+
         mDrawerLayout= (DrawerLayout) findViewById(R.id.drawerlayout);
         serchButton= (Button) findViewById(R.id.serch);
         addButton= (Button) findViewById(R.id.addbutton);
@@ -185,6 +221,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+
+
     //nav accesorries starts here
 
     public class RightMenuListener implements DrawerLayout.DrawerListener {
@@ -227,6 +266,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //nav accesorries stops here
+
 
 
 
